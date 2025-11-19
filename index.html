@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Drone Components Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FPV Drone Components Guide</h1>
+            <p class="tagline">Your comprehensive resource for understanding FPV drone components</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About FPV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="section active">
+            <h2>Understanding FPV Drone Components</h2>
+            <p class="intro-text">
+                First Person View (FPV) drones are complex machines made up of various specialized components. 
+                Each component plays a crucial role in the performance, reliability, and flight characteristics 
+                of your drone. Explore the categories below to learn more about each component type.
+            </p>
+
+            <div class="component-grid">
+                <div class="component-card" data-component="flight-controller">
+                    <div class="component-icon">🎮</div>
+                    <h3>Flight Controllers</h3>
+                    <p>The brain of your drone, processing sensor data and controlling motors</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="esc">
+                    <div class="component-icon">⚡</div>
+                    <h3>ESCs</h3>
+                    <p>Electronic Speed Controllers regulate power delivery to motors</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="motors">
+                    <div class="component-icon">🔄</div>
+                    <h3>Motors</h3>
+                    <p>Brushless motors provide the thrust needed for flight</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="frame">
+                    <div class="component-icon">🔲</div>
+                    <h3>Frames</h3>
+                    <p>The structural foundation that holds all components together</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="camera">
+                    <div class="component-icon">📷</div>
+                    <h3>FPV Cameras</h3>
+                    <p>Capture real-time video feed for piloting</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="vtx">
+                    <div class="component-icon">📡</div>
+                    <h3>Video Transmitters</h3>
+                    <p>Broadcast video signal to your goggles or monitor</p>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About FPV Drones</h2>
+            <div class="about-content">
+                <p>
+                    First Person View (FPV) flying is an immersive way to pilot drones by viewing real-time video 
+                    transmitted from a camera mounted on the aircraft. This technology has revolutionized drone racing, 
+                    freestyle flying, and aerial cinematography.
+                </p>
+                <h3>Key Characteristics of FPV Systems</h3>
+                <ul>
+                    <li><strong>Low Latency:</strong> Minimal delay between camera and display for responsive control</li>
+                    <li><strong>High Performance:</strong> Components designed for agility and speed</li>
+                    <li><strong>Modular Design:</strong> Easy to upgrade and customize individual components</li>
+                    <li><strong>Reliability:</strong> Built to withstand crashes and harsh flying conditions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Flight Controller Detail Section -->
+        <section id="flight-controller" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>Flight Controllers</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What is a Flight Controller?</h3>
+                    <p>
+                        The flight controller (FC) is the central processing unit of your drone. It's a sophisticated 
+                        computer that reads data from various sensors (gyroscope, accelerometer, barometer) and 
+                        calculates the appropriate motor speeds to maintain stability and execute pilot commands.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Processing Power:</strong> Modern FCs use F4, F7, or H7 processors</li>
+                        <li><strong>IMU (Inertial Measurement Unit):</strong> High-precision gyroscope and accelerometer</li>
+                        <li><strong>Firmware:</strong> Betaflight, KISS, or other flight control software</li>
+                        <li><strong>Connectivity:</strong> UART ports for peripherals, USB for configuration</li>
+                        <li><strong>Voltage Regulators:</strong> Built-in BEC (Battery Eliminator Circuit) for powering accessories</li>
+                    </ul>
+                </div>
+
+                <div class="example-component">
+                    <h3>Featured Component: MatekSys F722-SE</h3>
+                    <div class="example-details">
+                        <div class="example-image-placeholder">
+                            <div class="placeholder-icon">🎮</div>
+                            <p>MatekSys F722-SE Flight Controller</p>
+                        </div>
+                        <div class="example-specs">
+                            <h4>Specifications</h4>
+                            <ul>
+                                <li><strong>MCU:</strong> STM32F722RET6 (216MHz, 512KB Flash)</li>
+                                <li><strong>IMU:</strong> MPU6000 (SPI connected for low latency)</li>
+                                <li><strong>OSD:</strong> Integrated MAX7456 OSD chip</li>
+                                <li><strong>Barometer:</strong> BMP280 for altitude hold</li>
+                                <li><strong>Blackbox:</strong> 16MB flash for flight logging</li>
+                                <li><strong>Motor Outputs:</strong> 6x PWM outputs</li>
+                                <li><strong>UART Ports:</strong> 5x UART for GPS, RX, telemetry</li>
+                                <li><strong>I2C Port:</strong> For additional sensors</li>
+                                <li><strong>Power:</strong> 5V & 9V BEC, supports 2-6S LiPo</li>
+                                <li><strong>Size:</strong> 36mm x 36mm (M3 mounting holes)</li>
+                            </ul>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Built-in inverter for S.Port telemetry</li>
+                                <li>Dual gyro support for redundancy</li>
+                                <li>Betaflight OSD integration</li>
+                                <li>Current sensor input</li>
+                                <li>LED strip output (WS2812B)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="considerations">
+                    <h3>Choosing a Flight Controller</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Frame size and mounting pattern (20x20mm, 30.5x30.5mm, etc.)</li>
+                        <li>Processor speed (F4 for basic, F7/H7 for advanced features)</li>
+                        <li>Number of UART ports needed for peripherals</li>
+                        <li>Integrated OSD capability</li>
+                        <li>Voltage requirements and BEC specifications</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESC Detail Section -->
+        <section id="esc" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>Electronic Speed Controllers (ESCs)</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What is an ESC?</h3>
+                    <p>
+                        Electronic Speed Controllers (ESCs) are devices that regulate the speed and direction of 
+                        brushless motors. They convert DC battery power into three-phase AC power that drives 
+                        the motors, responding to signals from the flight controller.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Current Rating:</strong> Measured in amps (e.g., 30A, 45A, 60A per ESC)</li>
+                        <li><strong>Firmware:</strong> BLHeli_S, BLHeli_32, or manufacturer-specific</li>
+                        <li><strong>DSHOT Protocol:</strong> Modern digital communication (DSHOT300, DSHOT600)</li>
+                        <li><strong>4-in-1 or Individual:</strong> Integrated stack or separate ESCs</li>
+                        <li><strong>BEC:</strong> Some include voltage regulators for FC power</li>
+                    </ul>
+                </div>
+
+                <div class="example-component">
+                    <h3>Types of ESCs</h3>
+                    <div class="example-details">
+                        <div class="esc-types">
+                            <div class="esc-type">
+                                <h4>4-in-1 ESCs</h4>
+                                <div class="example-image-placeholder">
+                                    <div class="placeholder-icon">⚡</div>
+                                    <p>4-in-1 ESC Board</p>
+                                </div>
+                                <p><strong>Pros:</strong> Clean wiring, reduced weight, easier installation</p>
+                                <p><strong>Cons:</strong> If one fails, entire board needs replacement</p>
+                                <p><strong>Best for:</strong> Racing quads, clean builds</p>
+                            </div>
+                            <div class="esc-type">
+                                <h4>Individual ESCs</h4>
+                                <div class="example-image-placeholder">
+                                    <div class="placeholder-icon">⚡</div>
+                                    <p>Individual ESC</p>
+                                </div>
+                                <p><strong>Pros:</strong> Replace single ESC if failed, flexible mounting</p>
+                                <p><strong>Cons:</strong> More wiring, heavier overall</p>
+                                <p><strong>Best for:</strong> Large drones, redundancy needed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="considerations">
+                    <h3>Choosing an ESC</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Current rating should exceed motor draw by 20-30%</li>
+                        <li>Voltage rating compatible with battery (2-6S)</li>
+                        <li>Firmware compatibility (BLHeli_32 recommended)</li>
+                        <li>DSHOT protocol support for better performance</li>
+                        <li>Mounting hole pattern matching your frame</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motors Detail Section -->
+        <section id="motors" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>Brushless Motors</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What are Brushless Motors?</h3>
+                    <p>
+                        Brushless motors are the workhorses of FPV drones, converting electrical energy into 
+                        mechanical rotation. They're called "brushless" because they use electronic commutation 
+                        instead of mechanical brushes, offering higher efficiency, reliability, and power.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Understanding Motor Specifications</h3>
+                    <ul>
+                        <li><strong>Size:</strong> Expressed as XXYY (e.g., 2207) - XX is stator width, YY is stator height in mm</li>
+                        <li><strong>KV Rating:</strong> RPM per volt (higher KV = higher speed, lower torque)</li>
+                        <li><strong>Stator Volume:</strong> Larger volume = more torque and power</li>
+                        <li><strong>Configuration:</strong> Number of stator poles and magnets (e.g., 12N14P)</li>
+                        <li><strong>Shaft Size:</strong> Typically M5 for props 5" and above</li>
+                    </ul>
+                </div>
+
+                <div class="example-component">
+                    <h3>Motor Selection Guide</h3>
+                    <div class="example-details">
+                        <table class="specs-table">
+                            <thead>
+                                <tr>
+                                    <th>Frame Size</th>
+                                    <th>Motor Size</th>
+                                    <th>KV Range</th>
+                                    <th>Application</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3" Micro</td>
+                                    <td>1408-1506</td>
+                                    <td>3000-4000KV</td>
+                                    <td>Indoor, proximity flying</td>
+                                </tr>
+                                <tr>
+                                    <td>5" Racing</td>
+                                    <td>2207-2306</td>
+                                    <td>2400-2700KV</td>
+                                    <td>Racing, freestyle on 4-6S</td>
+                                </tr>
+                                <tr>
+                                    <td>5" Freestyle</td>
+                                    <td>2207-2507</td>
+                                    <td>1700-2000KV</td>
+                                    <td>Freestyle on 6S, cinematic</td>
+                                </tr>
+                                <tr>
+                                    <td>7" Long Range</td>
+                                    <td>2806-2808</td>
+                                    <td>1300-1500KV</td>
+                                    <td>Long range, efficiency</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="considerations">
+                    <h3>Motor Selection Tips</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Match motor size to frame and propeller size</li>
+                        <li>Higher KV for lighter props, lower KV for heavier props</li>
+                        <li>Check motor mounting pattern (16x16mm or 19x19mm)</li>
+                        <li>Consider weight - heavier motors affect flight characteristics</li>
+                        <li>Quality matters - good bearings and magnets ensure reliability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frame Detail Section -->
+        <section id="frame" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>Drone Frames</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What is a Drone Frame?</h3>
+                    <p>
+                        The frame is the structural backbone of your FPV drone. It provides mounting points for 
+                        all components and must be strong enough to survive crashes while remaining light enough 
+                        for optimal flight performance. Modern frames are typically made from carbon fiber.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Frame Specifications</h3>
+                    <ul>
+                        <li><strong>Size Class:</strong> Measured by diagonal motor-to-motor distance or prop size</li>
+                        <li><strong>Material:</strong> Carbon fiber thickness (3mm, 4mm, 5mm for arms)</li>
+                        <li><strong>Geometry:</strong> X, H, Stretch-X, DeadCat configurations</li>
+                        <li><strong>Mounting Pattern:</strong> 20x20mm, 30.5x30.5mm stack mounting</li>
+                        <li><strong>Camera Angle:</strong> Adjustable mount for different flying styles</li>
+                    </ul>
+                </div>
+
+                <div class="example-component">
+                    <h3>Common Frame Sizes</h3>
+                    <div class="example-details">
+                        <div class="frame-sizes">
+                            <div class="frame-size">
+                                <div class="example-image-placeholder">
+                                    <div class="placeholder-icon">🔲</div>
+                                    <p>3" Micro Frame</p>
+                                </div>
+                                <h4>3" Micro (130-150mm)</h4>
+                                <p><strong>Weight:</strong> 30-50g</p>
+                                <p><strong>Props:</strong> 3"</p>
+                                <p><strong>Use:</strong> Indoor flying, tight spaces</p>
+                            </div>
+                            <div class="frame-size">
+                                <div class="example-image-placeholder">
+                                    <div class="placeholder-icon">🔲</div>
+                                    <p>5" Racing Frame</p>
+                                </div>
+                                <h4>5" Standard (210-230mm)</h4>
+                                <p><strong>Weight:</strong> 80-150g</p>
+                                <p><strong>Props:</strong> 5"</p>
+                                <p><strong>Use:</strong> Racing, freestyle, general purpose</p>
+                            </div>
+                            <div class="frame-size">
+                                <div class="example-image-placeholder">
+                                    <div class="placeholder-icon">🔲</div>
+                                    <p>7" Long Range Frame</p>
+                                </div>
+                                <h4>7" Long Range (280-320mm)</h4>
+                                <p><strong>Weight:</strong> 150-250g</p>
+                                <p><strong>Props:</strong> 7"</p>
+                                <p><strong>Use:</strong> Long range, cinematic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="considerations">
+                    <h3>Choosing a Frame</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Flying style - racing frames are light, freestyle frames are durable</li>
+                        <li>Arm thickness - 4mm for racing, 5-6mm for freestyle</li>
+                        <li>Camera protection - top plate coverage</li>
+                        <li>Electronics stack space - room for FC, ESC, VTX</li>
+                        <li>Propeller protection - optional ducted frames for safety</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Camera Detail Section -->
+        <section id="camera" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>FPV Cameras</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What is an FPV Camera?</h3>
+                    <p>
+                        FPV cameras are specialized analog or digital cameras designed for low-latency video 
+                        transmission. Unlike action cameras (GoPro), FPV cameras prioritize minimal delay over 
+                        high resolution, essential for real-time piloting.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Sensor:</strong> CCD or CMOS (CMOS is modern standard)</li>
+                        <li><strong>Resolution:</strong> Typically 600-1200 TVL (TV Lines)</li>
+                        <li><strong>Latency:</strong> Ultra-low, usually under 10ms</li>
+                        <li><strong>Dynamic Range:</strong> WDR (Wide Dynamic Range) for mixed lighting</li>
+                        <li><strong>Size:</strong> Micro (14mm), Mini (19mm), Standard (28mm)</li>
+                        <li><strong>Voltage:</strong> 5V input typically</li>
+                    </ul>
+                </div>
+
+                <div class="considerations">
+                    <h3>Camera Selection</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Sensor size affects low-light performance</li>
+                        <li>WDR helps in variable lighting conditions</li>
+                        <li>Lens FOV (field of view) - wider for racing, narrower for cruising</li>
+                        <li>PAL vs NTSC standard (PAL = 50Hz, NTSC = 60Hz)</li>
+                        <li>Physical size must fit frame's camera mount</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- VTX Detail Section -->
+        <section id="vtx" class="section detail-section">
+            <button class="back-btn">← Back to Components</button>
+            <h2>Video Transmitters (VTX)</h2>
+            <div class="detail-content">
+                <div class="component-overview">
+                    <h3>What is a VTX?</h3>
+                    <p>
+                        A Video Transmitter (VTX) broadcasts the video signal from your FPV camera to your 
+                        goggles or ground station. It operates on specific frequency bands regulated by local 
+                        laws, typically in the 5.8GHz range for FPV use.
+                    </p>
+                </div>
+
+                <div class="component-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Frequency:</strong> 5.8GHz (most common), 2.4GHz, 1.3GHz available</li>
+                        <li><strong>Power Output:</strong> 25mW to 1000mW+ (check local regulations)</li>
+                        <li><strong>Channels:</strong> Multiple bands (A, B, E, F, R) with 8 channels each</li>
+                        <li><strong>SmartAudio/Tramp:</strong> Change settings via OSD</li>
+                        <li><strong>Pit Mode:</strong> Low power mode for bench testing</li>
+                    </ul>
+                </div>
+
+                <div class="considerations">
+                    <h3>VTX Selection</h3>
+                    <p><strong>Consider these factors:</strong></p>
+                    <ul>
+                        <li>Power output - higher isn't always better (legal limits, interference)</li>
+                        <li>Frequency bands - ensure compatibility with goggles</li>
+                        <li>SmartAudio/Tramp support for easy configuration</li>
+                        <li>Mounting size and weight</li>
+                        <li>Antenna connector type (MMCX, U.FL, SMA)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FPV Drone Components Guide. Educational resource for FPV enthusiasts.</p>
+            <p class="disclaimer">Always follow local regulations regarding drone operation and radio frequency usage.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
